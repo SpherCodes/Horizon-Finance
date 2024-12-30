@@ -2,6 +2,7 @@
 import { type ClassValue, clsx } from "clsx";
 import qs from "query-string";
 import { twMerge } from "tailwind-merge";
+import { z } from "zod";
 
 
 export function cn(...inputs: ClassValue[]) {
@@ -194,3 +195,20 @@ export const getTransactionStatus = (date: Date) => {
 
   return date > twoDaysAgo ? "Processing" : "Success";
 };
+
+export const authformSchema = (type) => z.object({
+  //sign up
+  firstName:type == 'Sign-In' ? z.string().optional() : z.string().min(2),
+  lastName:type == 'Sign-In' ? z.string().optional() : z.string().min(2),
+  address1:type == 'Sign-In' ? z.string().optional() : z.string().max(50),
+  city:type == 'Sign-In' ? z.string().optional() : z.string().max(50),
+  state:type == 'Sign-In' ? z.string().optional() : z.string().min(2).max(20),
+  postalCode:type == 'Sign-In' ? z.string().optional() : z.string().min(4).max(6),
+  dateOfBirth:type == 'Sign-In' ? z.string().optional() : z.string().min(3),
+  IdentityNumber:type == 'Sign-In' ? z.string().optional() : z.string().min(13).max(13),
+
+  //sign in and sign up
+  email: z.string().email(),
+  password: z.string().min(8),
+
+})

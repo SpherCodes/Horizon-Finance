@@ -1,15 +1,15 @@
-'use client'; 
 import Sidebar from '@/components/ui/Sidebar'
 import React from 'react';
 import Image from 'next/image';
 import MobileNav from '@/components/ui/MobileNav';
+import { getLoggedInUser } from '@/lib/actions/user.actions';
 
-export default function RootLayout({
+export default  async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const loggedIn = {firstname: 'Adrian', LastName:'JSM'};
+  const loggedIn = await getLoggedInUser();
   return (
     <main className="flex h-screen w-full font-inter">
         <Sidebar user={loggedIn}/>

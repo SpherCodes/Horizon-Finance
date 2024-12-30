@@ -1,10 +1,11 @@
+import AuthForm from '@/components/AuthForm'
 import React from 'react'
 
-const SignUp = () => {
+const SignUp = async  () => {
   return (
-    <div>
-      
-    </div>
+    <section className='flex flex-center size-full'>
+      <AuthForm type="Sign-Up"/>
+    </section>
   )
 }
 

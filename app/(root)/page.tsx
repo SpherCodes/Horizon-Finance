@@ -2,10 +2,15 @@ import React from 'react';
 import HeaderBox from "@/components/ui/headerBox";
 import TotalBalanceBox from '@/components/ui/TotalBalanceBox';
 import RightSidebar from '@/components/ui/RightSidebar';
+import { getLoggedInUser } from '@/lib/actions/user.actions';
+import { redirect } from 'next/navigation';
 
-const Dashboard: React.FC = () => {
-  const loggedIn = { firstName: 'Sphesihle' , lastName:'Mvelase' , email: 'sphesihle@gmail.com' };
-
+const Home  = async () => {
+  const loggedIn =  await getLoggedInUser();
+  if(!loggedIn){
+      redirect('/sign-in');
+  }
+  console.log(loggedIn);
   return (
     <section className='home'>
       <div className='home-content'>
@@ -13,7 +18,7 @@ const Dashboard: React.FC = () => {
           <HeaderBox 
             type="greeting"
             title="Welcome"
-            user={loggedIn?.firstName || "Guest"}
+            user={loggedIn?.name || "Guest"}
             subtext="Access and manage your account and transactions efficiently."
           />
           <TotalBalanceBox 
@@ -33,4 +38,4 @@ const Dashboard: React.FC = () => {
   );
 }
 
-export default Dashboard;
+export default Home;
