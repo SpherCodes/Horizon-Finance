@@ -4,9 +4,7 @@ import { z } from "zod"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { Button } from "@/components/ui/button"
-import {
-  Form,
-} from "@/components/ui/form"
+import {Form} from "@/components/ui/form"
 
 
 import Link from 'next/link'
@@ -17,6 +15,7 @@ import { authformSchema } from "@/lib/utils"
 import { Loader2 } from "lucide-react"
 import { useRouter } from "next/navigation"
 import { SignIn, SignUp } from "@/lib/actions/user.actions"
+import PlaidLink from "./PlaidLink"
 
 const AuthForm = ({type}:{type:string}) => {
     const router = useRouter()
@@ -38,8 +37,20 @@ const AuthForm = ({type}:{type:string}) => {
         setLoading(true)
         try{
             //Sign Up with Appwrite & create a plaid link token
+            const userData = {
+                firstName:data.firstName!,
+                lastName:data.lastName!,
+                address1:data.address1!,
+                city:data.city!,
+                state:data.state!,
+                postalCode:data.postalCode!,
+                dateOfBirth:data.dateOfBirth!,
+                ssn:data.ssn!,
+                email:data.email!,
+                password:data.password!,
+            }
             if(type ==='Sign-Up'){
-                const newUser = await SignUp(data)
+                const newUser = await SignUp(userData)
 
                 setUser(newUser)
             }
@@ -91,9 +102,9 @@ const AuthForm = ({type}:{type:string}) => {
             </header>
             {user?(
                 <div className='flex flex-col gap-4'>
-                {/* plaid link */}
+                    <PlaidLink  user={user} variant="primary"/>
                 </div>
-            ):(
+            ):( 
                 <>
                 <Form {...form}>
                     {type === 'Sign-Up' && (
@@ -110,7 +121,7 @@ const AuthForm = ({type}:{type:string}) => {
                         </div>
                         <div className="flex gap-4">
                             <CustomInput control={form.control} name="dateOfBirth" label="Date of Birth" placeholder="YYYY-MM-DD"/>
-                            <CustomInput control={form.control} name="IdentityNumber" label="ID No." placeholder="Enter your ID Number"/>
+                            <CustomInput control={form.control} name="ssn" label="SSN No." placeholder="Enter your ID Number"/>
                         </div>                            
                         </>
                     )}
