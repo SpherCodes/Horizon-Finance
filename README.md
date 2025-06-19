@@ -486,66 +486,6 @@ pnpm dev
 </tr>
 </table>
 
-## 🚀 Deployment Guide
-
-<div align="center">
-<img src="./docs/images/deployment-options.png" alt="Deployment Options" width="600"/>
-</div>
-
-### ▲ Vercel (Recommended)
-
-<table>
-<tr>
-<td width="50%">
-
-**1️⃣ One-Click Deploy**
-```bash
-# Deploy to Vercel instantly
-npx vercel --prod
-```
-
-**2️⃣ GitHub Integration**
-1. Push code to GitHub
-2. Import project on Vercel
-3. Configure environment variables
-4. Deploy automatically on push
-
-</td>
-<td width="50%">
-<img src="./docs/images/vercel-deploy.png" alt="Vercel Deployment" width="300"/>
-</td>
-</tr>
-</table>
-
-### 🌐 Other Deployment Options
-
-<div align="center">
-
-| Platform | Complexity | Performance | Cost |
-|----------|------------|-------------|------|
-| **Vercel** | ⭐ Easy | ⭐⭐⭐ Excellent | 💰 Free tier |
-| **Netlify** | ⭐⭐ Moderate | ⭐⭐⭐ Excellent | 💰 Free tier |
-| **Railway** | ⭐⭐ Moderate | ⭐⭐ Good | 💰💰 Paid |
-| **DigitalOcean** | ⭐⭐⭐ Complex | ⭐⭐ Good | 💰💰 Paid |
-
-</div>
-
-### 🔧 Pre-Deployment Checklist
-
-- [ ] Environment variables configured
-- [ ] Database migrations completed
-- [ ] Security headers enabled
-- [ ] Error monitoring setup (Sentry)
-- [ ] Performance optimization enabled
-- [ ] SSL certificates configured
-
-## 🤝 Contributing
-
-<div align="center">
-<img src="./docs/images/contributing-flow.png" alt="Contributing Flow" width="600"/>
-</div>
-
-We welcome contributions! Here's how you can help make NextBank better:
 
 ### 🎯 Ways to Contribute
 
@@ -646,48 +586,6 @@ graph LR
 [![🚀 Deployment](https://img.shields.io/badge/Deployment-Guide-orange?style=for-the-badge)](./docs/deployment)
 
 </div>
-
-### 📖 Learning Resources
-
-<table>
-<tr>
-<td width="50%">
-
-**🎓 Framework Documentation**
-- [Next.js Documentation](https://nextjs.org/docs) - React framework features
-- [TypeScript Handbook](https://www.typescriptlang.org/docs/) - Type safety guide
-- [Tailwind CSS Docs](https://tailwindcss.com/docs) - Utility-first CSS
-
-</td>
-<td width="50%">
-
-**🔌 Integration Guides**
-- [Appwrite Documentation](https://appwrite.io/docs) - Backend services
-- [Plaid Documentation](https://plaid.com/docs/) - Banking API integration  
-- [Radix UI Docs](https://www.radix-ui.com/docs) - Component primitives
-
-</td>
-</tr>
-</table>
-
-### 🎥 Video Tutorials
-
-<div align="center">
-
-| Topic | Duration | Level |
-|-------|----------|-------|
-| 🚀 **Getting Started** | 15 min | Beginner |
-| 🏦 **Plaid Integration** | 25 min | Intermediate |
-| 🎨 **UI Customization** | 20 min | Intermediate |
-| 🔒 **Security Best Practices** | 30 min | Advanced |
-
-*Video tutorials coming soon!*
-
-</div>
-
----
-
-<div align="center">
 
 ## 📄 License
 
