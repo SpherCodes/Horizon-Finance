@@ -654,14 +654,6 @@ Comprehensive guides
 
 <div align="center">
 
-**Made with ❤️ by the NextBank Team**
-
-[![GitHub stars](https://img.shields.io/github/stars/yourusername/nextbank?style=social)](https://github.com/yourusername/nextbank)
-[![GitHub forks](https://img.shields.io/github/forks/yourusername/nextbank?style=social)](https://github.com/yourusername/nextbank)
-[![GitHub watchers](https://img.shields.io/github/watchers/yourusername/nextbank?style=social)](https://github.com/yourusername/nextbank)
-
-**⭐ Star this repository if it helped you!**
-
 </div>
 
 </div>
