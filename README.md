@@ -14,26 +14,11 @@
 [![Appwrite](https://img.shields.io/badge/Appwrite-FD366E?style=for-the-badge&logo=appwrite&logoColor=white)](https://appwrite.io/)
 [![Plaid](https://img.shields.io/badge/Plaid-000000?style=for-the-badge&logo=plaid&logoColor=white)](https://plaid.com/)
 
-[🚀 Live Demo](https://nextbank-demo.vercel.app) • [📖 Documentation](./docs) • [🐛 Report Bug](https://github.com/yourusername/nextbank/issues) • [✨ Request Feature](https://github.com/yourusername/nextbank/issues)
+[📖 Documentation](./docs) • [🐛 Report Bug](https://github.com/yourusername/nextbank/issues)
 
 </div>
 
 ---
-
-## 📸 Screenshots
-
-<div align="center">
-
-### 🏠 Dashboard Overview
-<img src="./docs/images/dashboard-screenshot.png" alt="Dashboard Screenshot" width="800"/>
-
-### 💳 Bank Accounts Management
-<img src="./docs/images/banks-screenshot.png" alt="Bank Accounts Screenshot" width="800"/>
-
-### 💸 Payment Transfer
-<img src="./docs/images/transfer-screenshot.png" alt="Payment Transfer Screenshot" width="800"/>
-
-</div>
 
 ---
 
